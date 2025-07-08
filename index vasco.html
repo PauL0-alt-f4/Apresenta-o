@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="portuguese">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="vasco.png" type="image/x-icon">
+    <title>VASCO</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-image: url('vasco.png');
+            background-size: 200px 100px; /* Tamanho da imagem */
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 100vh;
+        }
+       
+    button {
+        font-size: 20px; /* Aumenta o tamanho do texto */
+        padding: 16px 32px; /* Aumenta o espaço interno do botão */
+        width: 140px; /* Define uma largura maior */
+        height: 130px; /* Define uma altura maior */
+        cursor: pointer; /* Mostra o cursor de clique */
+    }
+</style>
+    </style>
+</head>
+<body>
+    <h1>Bem-vindo à página do Vasco!</h1>
+        <button onclick="history.back()">COMO DIMINUI A FONTE</button>
+    <script>
+        // Alterar a cor de fundo a cada segundo
+        setInterval(() => {
+            const colors = ['pink', 'red', 'blue', 'green', 'yellow', 'purple', 'orange', 'cyan', 'magenta',
+            'lime', 'teal', 'brown', 'gold', 'silver', 'navy', 'coral', 'indigo', 'violet'];
+            const randomColor = colors[Math.floor(Math.random() * colors.length)];
+            document.body.style.backgroundColor = randomColor;
+        }, 500);
+
+        // Mover a imagem de fundo a cada segundo
+        setInterval(() => {
+            const randomX = Math.floor(Math.random() * (window.innerWidth - 200)); // Ajustado para o tamanho correto da imagem
+            const randomY = Math.floor(Math.random() * (window.innerHeight - 100)); // Ajustado para o tamanho correto da imagem
+            document.body.style.backgroundPosition = `${randomX}px ${randomY}px`;
+        }, 1000);
+
+        // Detectar clique na imagem de fundo
+        document.body.addEventListener('click', (event) => {
+            const rect = document.body.getBoundingClientRect();
+            const x = event.clientX - rect.left;
+            const y = event.clientY - rect.top;
+
+            // Verificar se backgroundPosition está definido
+            const bgPosition = document.body.style.backgroundPosition || '0px 0px';
+            const [bgX, bgY] = bgPosition.split(' ').map(pos => parseInt(pos));
+
+            // Verificar se o clique está dentro da área da imagem
+            if (x >= bgX && x <= bgX + 200 && y >= bgY && y <= bgY + 100) { // Ajustado para o tamanho correto da imagem
+                alert('Meu fi é tchola??🤨');
+            }
+        });
+    </script>
+</body>
+</html>

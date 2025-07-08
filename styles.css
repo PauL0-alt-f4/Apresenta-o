@@ -1,0 +1,32 @@
+h1 { /* Estilo do texto h1 */
+    background-color: rgba(8, 172, 8, 0.849);
+    padding: 15px; /* largura horizontal */
+    text-align: center; /* Alinhamento do texto */
+    border-radius: 20px; /* Bordas arredondadas */
+}
+ .left-aling{ 
+    text-align: left; 
+    margin-left: 950px; 
+    margin-top: -15px;
+    font-size: 20px; 
+}
+body {
+        background-image: url('imagens/batata.jpg'); /* Substitua pelo caminho da sua imagem */
+        background-size: cover; /* Faz a imagem cobrir todo o fundo */
+        background-repeat: no-repeat; /* Evita repetição da imagem */
+        background-position: top; /* Centraliza a imagem no fundo */
+}
+.centered-list {
+    text-align: center; /* Centraliza o texto da lista */
+    list-style-position: inside; /* Garante que os números fiquem dentro da lista */
+    padding: 0; /* Remove o padding padrão */
+    margin: 0; /* Remove o margin padrão */
+}
+
+h2.centered-list {
+    text-align: center; /* Centraliza o texto */
+    font-size: 24px; /* Ajusta o tamanho da fonte */
+    background: linear-gradient(to right, rgb(0, 0, 0), rgb(255, 255, 255), yellow, green, rgb(255, 0, 0), indigo, rgb(44, 17, 167)); /* Gradiente de cores */
+    -webkit-background-clip: text; /* Faz o gradiente aplicar-se ao texto */
+    -webkit-text-fill-color: transparent; /* Torna o fundo do texto transparente */
+}
